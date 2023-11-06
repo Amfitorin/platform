@@ -1,0 +1,531 @@
+fileFormatVersion: 2
+guid: 17f461ed258d37e4896a391a72da895d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 28784518130485990
+    second: Kitten_spritemap_0
+  - first:
+      213: 767774845314323381
+    second: Kitten_spritemap_1
+  - first:
+      213: 8353915405741802524
+    second: Kitten_spritemap_2
+  - first:
+      213: -868840453998828553
+    second: Kitten_spritemap_3
+  - first:
+      213: 5746526587633556484
+    second: Kitten_spritemap_4
+  - first:
+      213: -4560152770338563270
+    second: Kitten_spritemap_5
+  - first:
+      213: -7304019204349271932
+    second: Kitten_spritemap_6
+  - first:
+      213: 5134039822778511134
+    second: Kitten_spritemap_7
+  - first:
+      213: 143549177850258832
+    second: Kitten_spritemap_8
+  - first:
+      213: 2741532657267145536
+    second: Kitten_spritemap_9
+  - first:
+      213: -6779706304184598890
+    second: Kitten_spritemap_10
+  - first:
+      213: 4485737069645777828
+    second: Kitten_spritemap_11
+  - first:
+      213: -4900405681609370854
+    second: Kitten_spritemap_12
+  - first:
+      213: -2316755429193590993
+    second: Kitten_spritemap_13
+  - first:
+      213: -879823831806967911
+    second: Kitten_spritemap_14
+  - first:
+      213: -691984807733519972
+    second: Kitten_spritemap_15
+  - first:
+      213: 4365525951161984684
+    second: Kitten_spritemap_16
+  - first:
+      213: 3371812544418031012
+    second: Kitten_spritemap_17
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Kitten_spritemap_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 744
+        width: 263
+        height: 173
+      alignment: 9
+      pivot: {x: 0.5000001, y: 0.057035413}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be56a83eb7c0e8642b1de97b108f4694
+      internalID: 28784518130485990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitten_spritemap_1
+      rect:
+        serializedVersion: 2
+        x: 368
+        y: 773
+        width: 137
+        height: 96
+      alignment: 9
+      pivot: {x: 0.5541328, y: 0.24249776}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d2c099b9706492429ade22d9539aa56
+      internalID: 767774845314323381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitten_spritemap_2
+      rect:
+        serializedVersion: 2
+        x: 404
+        y: 694
+        width: 65
+        height: 33
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f631953070335c44198005516f5ddf4e
+      internalID: 8353915405741802524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitten_spritemap_4
+      rect:
+        serializedVersion: 2
+        x: 91
+        y: 525
+        width: 119
+        height: 117
+      alignment: 9
+      pivot: {x: 0.56224996, y: 0.1306674}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd6417385eb7f1945a8d0e5f84d2cbb1
+      internalID: 5746526587633556484
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitten_spritemap_6
+      rect:
+        serializedVersion: 2
+        x: 324
+        y: 557
+        width: 91
+        height: 84
+      alignment: 9
+      pivot: {x: 0.6090655, y: 0.29322815}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72d798e50360b2f46a04f9ee91695b68
+      internalID: -7304019204349271932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitten_spritemap_7
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 561
+        width: 101
+        height: 88
+      alignment: 9
+      pivot: {x: 0.38730735, y: 0.31892326}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba3086b223d31db4db7c2aa0a0dc0a88
+      internalID: 5134039822778511134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitten_spritemap_9
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 381
+        width: 122
+        height: 74
+      alignment: 9
+      pivot: {x: 0.9571416, y: 0.39233273}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: decd2091deb97994d9f0724a0f71f004
+      internalID: 2741532657267145536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitten_spritemap_10
+      rect:
+        serializedVersion: 2
+        x: 399
+        y: 443
+        width: 82
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5555208, y: 0.7709961}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 795e459b78b874a4e83608e469091b44
+      internalID: -6779706304184598890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitten_spritemap_11
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 322
+        width: 42
+        height: 28
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240b57c73078c7948a2ceb450cb0118e
+      internalID: 4485737069645777828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitten_spritemap_12
+      rect:
+        serializedVersion: 2
+        x: 477
+        y: 324
+        width: 32
+        height: 34
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d994fba9c9ea87a45a3f8fad8e602ec6
+      internalID: -4900405681609370854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitten_spritemap_13
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 225
+        width: 70
+        height: 65
+      alignment: 9
+      pivot: {x: 0.8902367, y: 0.85021126}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fb72061d5e756a47a042af6a5d96633
+      internalID: -2316755429193590993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitten_spritemap_14
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 218
+        width: 55
+        height: 82
+      alignment: 9
+      pivot: {x: 0.16889039, y: 0.8747693}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3af94526aebce704ea84979bc615ae50
+      internalID: -879823831806967911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitten_spritemap_15
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 236
+        width: 30
+        height: 29
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c26706eadd62eb945a84df3ae632ecae
+      internalID: -691984807733519972
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitten_spritemap_16
+      rect:
+        serializedVersion: 2
+        x: 70
+        y: 79
+        width: 64
+        height: 69
+      alignment: 9
+      pivot: {x: 0.69562626, y: 0.912388}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e2952b047d3d9649b810db6bd61acee
+      internalID: 4365525951161984684
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Kitten_spritemap_17
+      rect:
+        serializedVersion: 2
+        x: 211
+        y: 93
+        width: 63
+        height: 58
+      alignment: 9
+      pivot: {x: 0.30126783, y: 0.83360684}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35a1dcc23dfdf9e40bdcac329be734a1
+      internalID: 3371812544418031012
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Kitten_spritemap_0: 28784518130485990
+      Kitten_spritemap_1: 767774845314323381
+      Kitten_spritemap_10: -6779706304184598890
+      Kitten_spritemap_11: 4485737069645777828
+      Kitten_spritemap_12: -4900405681609370854
+      Kitten_spritemap_13: -2316755429193590993
+      Kitten_spritemap_14: -879823831806967911
+      Kitten_spritemap_15: -691984807733519972
+      Kitten_spritemap_16: 4365525951161984684
+      Kitten_spritemap_17: 3371812544418031012
+      Kitten_spritemap_2: 8353915405741802524
+      Kitten_spritemap_4: 5746526587633556484
+      Kitten_spritemap_6: -7304019204349271932
+      Kitten_spritemap_7: 5134039822778511134
+      Kitten_spritemap_9: 2741532657267145536
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

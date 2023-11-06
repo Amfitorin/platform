@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a9c782a50b6440fb3993f9d37bb2c07, type: 3}
+  m_Name: ResourcesManager
+  m_EditorClassIdentifier: 
+  Player: {fileID: 4622308260584639443, guid: 8d46f45c44c730c3fa0dba93dcd9f4ac, type: 3}
+  Bullet: {fileID: 6143484331697680971, guid: edb2ff09c2191a0149a9ccd5ca0c315c, type: 3}
+  PlayerBullet: {fileID: 6143484331697680971, guid: e0eb62f0365d8559887d1677283cefba,
+    type: 3}
+  PlayerConfig: {fileID: 11400000, guid: 5761cc031af564ab49a4c068101dffe6, type: 2}
+  Maps:
+  - Map: {fileID: 3936014049522572737, guid: bced8f56388f7ba44bcaab5dc094ef5e, type: 3}
+    weight: 1
+  - Map: {fileID: 3534360640680040622, guid: 2d5be9b53f2a5f445be068b86b8d792b, type: 3}
+    weight: 1
+  - Map: {fileID: 230405966095346757, guid: a6b9424d1c6669140a46628e91d89fef, type: 3}
+    weight: 1
+  - Map: {fileID: 2811336861551968163, guid: 44b0fa0eab04d9e4abcc1c2deb692452, type: 3}
+    weight: 1
+  - Map: {fileID: 7623213071402518238, guid: 0e509d41cc580be4e878a2a73fccba66, type: 3}
+    weight: 1

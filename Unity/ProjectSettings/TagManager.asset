@@ -1,0 +1,61 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags: []
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - 
+  - 
+  - player
+  - ground
+  - enemy
+  - collectable
+  - playerCollider
+  - maptrigger
+  - kitten_base
+  - kitten_features
+  - enemyBullet
+  - playerBullet
+  - enemy
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: top
+    uniqueID: 3205455553
+    locked: 0
+  - name: collect
+    uniqueID: 3227254341
+    locked: 0
+  - name: kitten_base
+    uniqueID: 1034659683
+    locked: 0
+  - name: kitten_features
+    uniqueID: 3174547095
+    locked: 0
+  - name: Pugomination
+    uniqueID: 1753451519
+    locked: 0
+  - name: Car
+    uniqueID: 4205130049
+    locked: 0

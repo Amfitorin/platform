@@ -1,0 +1,497 @@
+fileFormatVersion: 2
+guid: 48285041486ec6c4386cca999f46d2f0
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -688162369790792330
+    second: Cat_map_0
+  - first:
+      213: -3158637340696590532
+    second: Cat_map_1
+  - first:
+      213: -4814050989762099767
+    second: Cat_map_2
+  - first:
+      213: -6655735886652953699
+    second: Cat_map_3
+  - first:
+      213: -2311685799177008613
+    second: Cat_map_4
+  - first:
+      213: 4787670591316766245
+    second: Cat_map_5
+  - first:
+      213: 5849855813284389381
+    second: Cat_map_6
+  - first:
+      213: 5561787166054823133
+    second: Cat_map_7
+  - first:
+      213: 3228005148762150031
+    second: Cat_map_8
+  - first:
+      213: 7041400821895384819
+    second: Cat_map_9
+  - first:
+      213: 4541836900444146261
+    second: Cat_map_10
+  - first:
+      213: 1042261247788942251
+    second: Cat_map_11
+  - first:
+      213: 8929997369115297166
+    second: Cat_map_12
+  - first:
+      213: 4189635338746810826
+    second: Cat_map_13
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
+  cookieLightType: 1
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Cat_map_0
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 546
+        width: 87
+        height: 82
+      alignment: 9
+      pivot: {x: 0.5903636, y: 0.26716354}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 038cd4a34a1defb4db1be2fb7ea1262a
+      internalID: -688162369790792330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_map_1
+      rect:
+        serializedVersion: 2
+        x: 206
+        y: 549
+        width: 87
+        height: 84
+      alignment: 9
+      pivot: {x: 0.34509066, y: 0.24596731}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea71c39ea168cc445a577f8508db2264
+      internalID: -3158637340696590532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_map_2
+      rect:
+        serializedVersion: 2
+        x: 436
+        y: 567
+        width: 76
+        height: 63
+      alignment: 9
+      pivot: {x: 0.8398831, y: 0.87436444}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19e65a5ab614c0f45b25a8e9e534e19b
+      internalID: -4814050989762099767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_map_3
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 565
+        width: 65
+        height: 71
+      alignment: 9
+      pivot: {x: 0.18899019, y: 0.84800094}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20ce3a2bb7b07524aa45fe7dcc22a3f2
+      internalID: -6655735886652953699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_map_4
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 487
+        width: 45
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ac8b74722e398d4e8b29430aea2e0ad
+      internalID: -2311685799177008613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_map_5
+      rect:
+        serializedVersion: 2
+        x: 207
+        y: 488
+        width: 34
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04dbd25bdda8ae94ab93f21a4d68c486
+      internalID: 4787670591316766245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_map_6
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 392
+        width: 133
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d48bca92ca9046498e26ee3c4353450
+      internalID: 5849855813284389381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_map_7
+      rect:
+        serializedVersion: 2
+        x: 446
+        y: 420
+        width: 54
+        height: 76
+      alignment: 9
+      pivot: {x: 0.71573174, y: 0.88975805}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d30c6ee5c0326a41b2b2d7470580e9e
+      internalID: 5561787166054823133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_map_8
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 426
+        width: 53
+        height: 69
+      alignment: 9
+      pivot: {x: 0.3083784, y: 0.90476745}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33c9e7eb3ad6d5343845183d7539ebda
+      internalID: 3228005148762150031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_map_9
+      rect:
+        serializedVersion: 2
+        x: 462
+        y: 296
+        width: 129
+        height: 75
+      alignment: 9
+      pivot: {x: 0.93956715, y: 0.4210095}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47c0cee754709e1409662a16b1919100
+      internalID: 7041400821895384819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_map_10
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 338
+        width: 51
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d5cdd3e3fc506f4ab4804d2f9f9e9d7
+      internalID: 4541836900444146261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_map_11
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 265
+        width: 81
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4badd8264c7968a41a2093a820b4010e
+      internalID: 1042261247788942251
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_map_12
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 46
+        width: 274
+        height: 174
+      alignment: 9
+      pivot: {x: 0.5, y: 0.035272073}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 648dc4e19cfa0754197967e71a9d3f79
+      internalID: 8929997369115297166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cat_map_13
+      rect:
+        serializedVersion: 2
+        x: 482
+        y: 101
+        width: 110
+        height: 99
+      alignment: 9
+      pivot: {x: 0.53062963, y: 0.04622542}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d306b60dc7a4fe48b4d9fcebeb14b5b
+      internalID: 4189635338746810826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Cat_map_0: -688162369790792330
+      Cat_map_1: -3158637340696590532
+      Cat_map_10: 4541836900444146261
+      Cat_map_11: 1042261247788942251
+      Cat_map_12: 8929997369115297166
+      Cat_map_13: 4189635338746810826
+      Cat_map_2: -4814050989762099767
+      Cat_map_3: -6655735886652953699
+      Cat_map_4: -2311685799177008613
+      Cat_map_5: 4787670591316766245
+      Cat_map_6: 5849855813284389381
+      Cat_map_7: 5561787166054823133
+      Cat_map_8: 3228005148762150031
+      Cat_map_9: 7041400821895384819
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
