@@ -896,6 +896,138 @@
      <Reference Include="netstandard">
      <HintPath>/Applications/Unity/Hub/Editor/2021.3.27f1/Unity.app/Contents/UnityReferenceAssemblies/unity-4.8-api/Facades/netstandard.dll</HintPath>
      </Reference>
+     <Reference Include="UnityEditor.TestRunner">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.TestRunner">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+     </Reference>
+     <Reference Include="Purchasing.Common">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Purchasing.Common.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.InternalAPIEngineBridge.001">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.InternalAPIEngineBridge.001.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VSCode.Editor">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Purchasing">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/UnityEngine.Purchasing.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TextMeshPro.Editor">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Purchasing.SecurityStub">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/UnityEngine.Purchasing.SecurityStub.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Advertisements">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/UnityEngine.Advertisements.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.IK.Editor">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.2D.IK.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.UI">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Rider.Editor">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Analytics">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Analytics.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UI">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.SpatialTracking">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Analytics.DataPrivacy">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.Analytics.DataPrivacy.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.IK.Runtime">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.2D.IK.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Purchasing.Codeless">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/UnityEngine.Purchasing.Codeless.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Mathematics.Editor">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.Mathematics.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Common.Editor">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.2D.Common.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Animation.Editor">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.2D.Animation.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Tilemap.Editor">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualStudio.Editor">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Timeline">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TextMeshPro">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst.Editor">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.Burst.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Sprite.Editor">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.InternalAPIEditorBridge.001">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.InternalAPIEditorBridge.001.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.PlasticSCM.Editor">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Services.Core">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.Services.Core.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Mathematics">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.Mathematics.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Services.Core.Analytics">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.Services.Core.Analytics.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Burst">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.Burst.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Purchasing.SecurityCore">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/UnityEngine.Purchasing.SecurityCore.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Services.Core.Environments">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.Services.Core.Environments.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Animation.Runtime">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.2D.Animation.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Timeline.Editor">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Purchasing.Stores">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/UnityEngine.Purchasing.Stores.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.2D.Common.Runtime">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/Unity.2D.Common.Runtime.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.Purchasing">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/UnityEditor.Purchasing.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.SpatialTracking">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.Advertisements.Editor">
+     <HintPath>/Users/s.sharkov/projects/gj2019/Unity/Library/ScriptAssemblies/UnityEngine.Advertisements.Editor.dll</HintPath>
+     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp.csproj">

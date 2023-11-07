@@ -25,8 +25,8 @@
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
-    <OutputPath>Temp/Bin/Debug</OutputPath>
-    <DefineConstants></DefineConstants>
+    <OutputPath>Temp\Bin\Debug\Unity.Rider.Editor\</OutputPath>
+    <DefineConstants>UNITY_EDITOR</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169,0649</NoWarn>
@@ -43,6 +43,15 @@
   <ItemGroup>
      <Folder Include="Assets/Plugins/UniRx" />
      <Folder Include="Assets/Plugins" />
+     <Reference Include="UnityEngine">
+     <HintPath>/Applications/Unity/Hub/Editor/2021.3.27f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.CoreModule">
+     <HintPath>/Applications/Unity/Hub/Editor/2021.3.27f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.CoreModule.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor">
+     <HintPath>/Applications/Unity/Hub/Editor/2021.3.27f1/Unity.app/Contents/Managed/UnityEngine/UnityEditor.dll</HintPath>
+     </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
