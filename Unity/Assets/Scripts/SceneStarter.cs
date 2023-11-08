@@ -6,8 +6,13 @@ using UnityEngine;
 
 namespace MyRI
 {
+    
+    /// <summary>
+    /// god scene objects with links to main window elements
+    /// </summary>
     public class SceneStarter : MonoBehaviour
     {
+        private static SceneStarter _instance;
         public FailPopup Fail;
         public GameplayHUD HUD;
         public HelpPopup Help;
@@ -17,32 +22,34 @@ namespace MyRI
         public VictoryPopup Vic;
         public MapSpawner MapSpawner;
 
-        private static SceneStarter _instance;
-        
-        private UpdateProvider _updateProvider;
-        public UpdateProvider UpdateProvider => _updateProvider;
+        public UpdateProvider UpdateProvider { get; private set; }
 
         public static SceneStarter Instance
         {
             get
             {
-                if (_instance == null)
+                if (_instance != null)
+                    return _instance;
+                _instance = FindObjectOfType<SceneStarter>();
+                if (_instance != null)
                 {
-                    _instance = FindObjectOfType<SceneStarter>();
-                    if (_instance != null)
-                    {
-                        _instance.InitUpdateProvider();
-                    }
+                    _instance.InitUpdateProvider();
                 }
                 return _instance;
             }
         }
 
+        private void Awake()
+        {
+            OpenWithWait(MainM, 3f);
+            InitUpdateProvider();
+        }
+
         private void InitUpdateProvider()
         {
-            if (_updateProvider != null)
+            if (UpdateProvider != null)
                 return;
-            _updateProvider = new UpdateProvider();
+            UpdateProvider = new UpdateProvider();
         }
 
         public void OpenPopup(BaseWindow window, bool state)
@@ -50,13 +57,7 @@ namespace MyRI
             window.gameObject.SetActive(state);
         }
 
-        private void Awake()
-        {
-            OpenWithWait(MainM, 3f);
-           InitUpdateProvider();
-        }
-
-        public void OpenWithWait(BaseWindow window, float time)
+        private void OpenWithWait(BaseWindow window, float time)
         {
             StartCoroutine(Wait(time, () => { window.gameObject.SetActive(true); }));
         }

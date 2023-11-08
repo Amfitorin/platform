@@ -2,8 +2,14 @@
 
 namespace MyRI.UIScripts
 {
+    /// <summary>
+    /// popup opened when character is death
+    /// </summary>
     public class FailPopup : BaseWindow
     {
+        /// <summary>
+        /// restart button handler
+        /// </summary>
         public void OnRestartButtonClick()
         {
             SceneStarter.MapSpawner.gameObject.SetActive(false);
@@ -16,6 +22,9 @@ namespace MyRI.UIScripts
             });
         }
 
+        /// <summary>
+        /// cancel game handler
+        /// </summary>
         public void OnNoClicked()
         {
             OnCloseWindowClick();

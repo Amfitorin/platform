@@ -4,25 +4,25 @@ using MyRI.Configs.Collectables;
 
 namespace MyRI.Mechanics.Effects
 {
+    /// <summary>
+    /// Controller for effect and effect targets
+    /// </summary>
     public class Effector : IEffector
     {
+        /// <summary>
+        /// Notifier for buff collectables taken
+        /// </summary>
         private readonly IBuffNotify _buffNotify;
+        
+        /// <summary>
+        /// registered effect targets for buff types
+        /// </summary>
         private readonly Dictionary<Type, IEffectTarget> _targets = new();
 
         public Effector(IBuffNotify buffNotify)
         {
             _buffNotify = buffNotify;
             _buffNotify.BuffGained += OnBuffGained;
-        }
-        private void OnBuffGained(BuffData buff)
-        {
-            if (!_targets.TryGetValue(buff.Config.GetType(), out var target))
-            {
-                return;
-            }
-
-            var effect = EffectFactory.GetEffect(buff);
-            effect.ApplyEffect(target);
         }
 
         public void RegisterTarget<T>(IEffectTarget<T> target) where T : BuffCollectable
@@ -43,6 +43,16 @@ namespace MyRI.Mechanics.Effects
         public void Dispose()
         {
             _buffNotify.BuffGained -= OnBuffGained;
+        }
+        private void OnBuffGained(BuffData buff)
+        {
+            if (!_targets.TryGetValue(buff.Config.GetType(), out var target))
+            {
+                return;
+            }
+
+            var effect = EffectFactory.GetEffect(buff);
+            effect.ApplyEffect(target);
         }
     }
 }

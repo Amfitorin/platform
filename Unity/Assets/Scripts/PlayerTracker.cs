@@ -2,6 +2,10 @@
 
 namespace MyRI
 {
+    
+    /// <summary>
+    /// component for camera. Track character position
+    /// </summary>
     public class PlayerTracker : MonoBehaviour
     {
         public Transform player;

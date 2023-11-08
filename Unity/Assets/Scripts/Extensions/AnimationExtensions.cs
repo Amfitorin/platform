@@ -9,10 +9,6 @@ namespace MyRI.Extensions
 {
     public static class AnimationExtensions
     {
-        private static AnimationAwaiter GetAwaiter(this Animation anim)
-        {
-            return new AnimationAwaiter(anim);
-        }
 
         public static TweenAwaiter GetAwaiter(this Tween anim)
         {
@@ -39,6 +35,10 @@ namespace MyRI.Extensions
             anim.Play(clip.name);
             await anim;
         }
+        private static AnimationAwaiter GetAwaiter(this Animation anim)
+        {
+            return new AnimationAwaiter(anim);
+        }
     }
 
     public class AnimationAwaiter : INotifyCompletion
@@ -48,7 +48,6 @@ namespace MyRI.Extensions
         private IDisposable _timerToken;
 
         public bool IsCompleted => !_animation.isPlaying;
-        public string GetResult() => _animation.name;
 
         public AnimationAwaiter(Animation animation)
         {
@@ -59,9 +58,10 @@ namespace MyRI.Extensions
         public void OnCompleted(Action continuation)
         {
             _continuation = continuation;
-            _timerToken = Observable.EveryLateUpdate().Subscribe((_) => CheckAnim());
+            _timerToken = Observable.EveryLateUpdate().Subscribe(_ => CheckAnim());
             CheckAnim();
         }
+        public string GetResult() => _animation.name;
         private void CheckAnim()
         {
             if (_animation != null && _animation.isPlaying)
@@ -77,7 +77,6 @@ namespace MyRI.Extensions
         private Action _continuation;
 
         public bool IsCompleted => false;
-        public string GetResult() => _animation.stringId;
 
         public TweenAwaiter(Tween animation)
         {
@@ -93,5 +92,6 @@ namespace MyRI.Extensions
                 _continuation();
             });
         }
+        public string GetResult() => _animation.stringId;
     }
 }

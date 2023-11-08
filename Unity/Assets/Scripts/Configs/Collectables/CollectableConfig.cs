@@ -8,7 +8,7 @@ namespace MyRI.Configs.Collectables
         private Sprite _icon;
 
         public virtual CollectableType CollType => CollectableType.None;
-        
+
         public Sprite Icon => _icon;
     }
 }

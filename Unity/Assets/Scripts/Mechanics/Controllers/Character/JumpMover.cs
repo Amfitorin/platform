@@ -5,11 +5,20 @@ using UnityEngine;
 
 namespace MyRI.Mechanics.Controllers.Character
 {
+    /// <summary>
+    /// player mover with jump
+    /// </summary>
     public class JumpMover : CharacterMover
     {
-        protected bool ToJumped;
-
+        /// <summary>
+        /// controller for jump buttons
+        /// </summary>
         private readonly JumpInputController _inputController;
+        
+        /// <summary>
+        /// flag for current jump state
+        /// </summary>
+        protected bool ToJumped;
         public JumpMover(ICharacterView characterView, CharacterConfig config, Vector2 direction, float speed)
             : base(characterView, config, direction, speed)
         {
@@ -17,9 +26,18 @@ namespace MyRI.Mechanics.Controllers.Character
             _inputController.JumpEvent += OnJumpEvent;
         }
 
-        private void OnJumpEvent()
+        public override void Dispose()
         {
-            Jump();
+            base.Dispose();
+            _inputController.JumpEvent -= OnJumpEvent;
+        }
+
+        public virtual void Jump()
+        {
+            if (!CharacterView.Grounded || ToJumped)
+                return;
+            CharacterView.Jump();
+            ToJumped = true;
         }
 
         public override void Update()
@@ -32,24 +50,15 @@ namespace MyRI.Mechanics.Controllers.Character
                 ResetFlags();
             }
         }
+
+        private void OnJumpEvent()
+        {
+            Jump();
+        }
         protected virtual void ResetFlags()
         {
             CharacterView.ToGround();
             ToJumped = false;
-        }
-
-        public virtual void Jump()
-        {
-            if (!CharacterView.Grounded || ToJumped)
-                return;
-            CharacterView.Jump();
-            ToJumped = true;
-        }
-
-        public override void Dispose()
-        {
-            base.Dispose();
-            _inputController.JumpEvent -= OnJumpEvent;
         }
     }
 }

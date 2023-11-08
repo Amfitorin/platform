@@ -1,21 +1,32 @@
 using System;
 using System.Linq;
 using MyRI.Configs.Collectables;
-using MyRI.Mechanics;
 using MyRI.Mechanics.Effects;
 using Unity.Mathematics;
 using UnityEngine;
 
 namespace MyRI.Components.Collectables
 {
+    /// <summary>
+    /// Collectables view on main hud interface
+    /// </summary>
     public class CollectablesComponent : MonoBehaviour, ICollectableView
     {
+        /// <summary>
+        /// Car part huds elements
+        /// </summary>
         [SerializeField]
         private CarPatHudItem[] _partHuds;
 
+        /// <summary>
+        /// Transform for use as spawn parent for buff items
+        /// </summary>
         [SerializeField]
         private Transform _buffParent;
 
+        /// <summary>
+        /// Prefab for spawn as buff item
+        /// </summary>
         [SerializeField]
         private GameObject _buff;
 

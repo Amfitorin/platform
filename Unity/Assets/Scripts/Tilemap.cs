@@ -3,6 +3,9 @@ using UnityEngine;
 
 namespace MyRI
 {
+    /// <summary>
+    /// part of level map. Spawned dynamicaly
+    /// </summary>
     public class Tilemap : MonoBehaviour
     {
         public Transform PlayerSpawnPoint;

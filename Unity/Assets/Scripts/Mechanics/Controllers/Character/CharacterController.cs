@@ -6,12 +6,32 @@ using MyRI.Mechanics.Effects;
 
 namespace MyRI.Mechanics.Controllers.Character
 {
+    
+    /// <summary>
+    /// character controller, control character move, states, effects and other elements
+    /// </summary>
     public class CharacterController : ICharacterController, ISpeedTargetEffect, IFlyTargetEffect
     {
-        private readonly IEffector _effector;
+        
+        /// <summary>
+        /// collectables controller, control buffs and other collect elements
+        /// </summary>
         private readonly CollectablesController _collectables;
-        private ICharacterState _currentState;
+        
+        /// <summary>
+        /// working with effects, attached on character
+        /// </summary>
+        private readonly IEffector _effector;
+        
+        /// <summary>
+        /// state controller
+        /// </summary>
         private readonly CharacterStateController _stateController;
+        
+        /// <summary>
+        /// current character state
+        /// </summary>
+        private ICharacterState _currentState;
 
         public ICollectablesController Collectables => _collectables;
         public IMover Mover => _currentState.Mover;

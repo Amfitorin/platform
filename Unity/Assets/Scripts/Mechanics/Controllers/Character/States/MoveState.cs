@@ -4,20 +4,32 @@ using UnityEngine;
 
 namespace MyRI.Mechanics.Controllers.Character.States
 {
+    /// <summary>
+    /// Character move state working without buffs
+    /// </summary>
     public class MoveState : ICharacterState
     {
-        private readonly ICharacterController _character;
+        /// <summary>
+        /// Character configuration settings
+        /// </summary>
         private readonly CharacterConfig _config;
+        
+        /// <summary>
+        /// Character view need for controll postition from mover
+        /// </summary>
         private readonly ICharacterView _view;
+        
+        /// <summary>
+        /// mover with double jump
+        /// </summary>
         private DblJumpMover _mover;
 
         public IMover Mover => _mover;
-        public MoveState(ICharacterController character, ICharacterView view, CharacterConfig config)
+        public MoveState(ICharacterView view, CharacterConfig config)
         {
-            _character = character;
             _view = view;
             _config = config;
-            
+
         }
         public void ApplyState(Vector2 direction, float speed)
         {

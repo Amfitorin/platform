@@ -6,16 +6,16 @@ namespace MyRI.UIScripts
 {
     public class ProgressBar : MonoBehaviour
     {
-        public RectTransform PlayerHPCointainer; // Контейнер ХП бара игрока
+        public RectTransform PlayerHPCointainer;// Контейнер ХП бара игрока
         public RectTransform PlayerHPFill;
         public Image FillImage;
 
         public Color startColor;
         public Color HitColor;
+        private float _current;
+        private float _maxValue;
 
         private float _maxWidth;
-        private float _maxValue;
-        private float _current;
 
         private void Awake()
         {
@@ -41,7 +41,7 @@ namespace MyRI.UIScripts
         {
             var current = new Vector2(Mathf.Clamp01(_current / _maxValue) * _maxWidth, PlayerHPFill.rect.height);
             var total = new Vector2(Mathf.Clamp01((_current - damage) / _maxValue) * _maxWidth,
-                PlayerHPFill.rect.height);
+            PlayerHPFill.rect.height);
             DOTween.To(() => current, x => PlayerHPFill.sizeDelta = x, total, 0.25f);
             DOTween.To(() => _current, x => _current = x, _current - damage, 0.25f);
         }

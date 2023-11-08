@@ -6,30 +6,40 @@ using UnityEngine.Serialization;
 
 namespace MyRI
 {
+    
+    /// <summary>
+    /// resource manager. Main object for collect resources components and load from resources
+    /// </summary>
     [CreateAssetMenu(menuName = "Configs/ResourcesManager")]
     public class ResourcesManager : ScriptableObject
     {
-        [FormerlySerializedAs("Player")]
-        [SerializeField]
-        private GameObject _player;
-        [FormerlySerializedAs("Bullet")]
-        [SerializeField]
-        private GameObject _bullet;
-        [FormerlySerializedAs("PlayerBullet")]
-        [SerializeField]
-        private GameObject _playerBullet;
-        [FormerlySerializedAs("PlayerConfig")]
-        [SerializeField]
-        private CharacterConfig _playerConfig;
-        [FormerlySerializedAs("Maps")]
-        [SerializeField]
-        private MapSpawnSelector[] _maps;
-        [SerializeField]
-        private CarPartCounts[] _partCounts;
-        
+
         private const string PATH = "Configs/ResourcesManager";
 
         private static ResourcesManager _instance;
+
+        [FormerlySerializedAs("Player")]
+        [SerializeField]
+        private GameObject _player;
+
+        [FormerlySerializedAs("Bullet")]
+        [SerializeField]
+        private GameObject _bullet;
+
+        [FormerlySerializedAs("PlayerBullet")]
+        [SerializeField]
+        private GameObject _playerBullet;
+
+        [FormerlySerializedAs("PlayerConfig")]
+        [SerializeField]
+        private CharacterConfig _playerConfig;
+
+        [FormerlySerializedAs("Maps")]
+        [SerializeField]
+        private MapSpawnSelector[] _maps;
+
+        [SerializeField]
+        private CarPartCounts[] _partCounts;
 
         public static ResourcesManager Instance
         {
@@ -65,6 +75,7 @@ namespace MyRI
         [FormerlySerializedAs("Map")]
         [SerializeField]
         private GameObject _map;
+
         [FormerlySerializedAs("weight")]
         [SerializeField]
         private float _weight;
@@ -79,6 +90,7 @@ namespace MyRI
     {
         [SerializeField]
         private CarPartType _part;
+
         [SerializeField]
         private int _count;
 

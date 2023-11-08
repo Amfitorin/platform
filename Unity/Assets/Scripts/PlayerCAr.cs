@@ -5,13 +5,16 @@ using UnityEngine;
 
 namespace MyRI
 {
+    /// <summary>
+    /// car state component
+    /// </summary>
     public class PlayerCAr : MonoBehaviour
     {
         public CharacterViewComponent player;
         public Transform _gun;
 
         public float bulletForce;
-        
+
         public Vector2 flyVec = new(-1, 0.88f);
 
         public void StartAttack(CarGun config)

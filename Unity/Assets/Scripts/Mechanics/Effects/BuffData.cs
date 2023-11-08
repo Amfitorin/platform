@@ -3,29 +3,43 @@ using MyRI.Configs.Collectables;
 
 namespace MyRI.Mechanics.Effects
 {
+    /// <summary>
+    /// data for character buff
+    /// </summary>
     public class BuffData
     {
-        private BuffCollectable _config;
+        /// <summary>
+        /// time when buff expired
+        /// </summary>
+        public DateTime BuffEnd { get; }
 
-        private DateTime _buffEnd;
+        /// <summary>
+        /// buff settings cofig
+        /// </summary>
+        public BuffCollectable Config { get; }
 
-        private DateTime _startTime;
+        
+        /// <summary>
+        /// is true if buff time not expired
+        /// </summary>
+        public bool IsActive => BuffEnd > DateTime.Now;
 
-        public BuffCollectable Config => _config;
+        
+        /// <summary>
+        /// remaining time to expire buff
+        /// </summary>
+        public TimeSpan Remaining => BuffEnd - DateTime.Now;
 
-        public DateTime BuffEnd => _buffEnd;
-
-        public DateTime StartTime => _startTime;
-
-        public TimeSpan Remaining => _buffEnd - DateTime.Now;
-
-        public bool IsActive => _buffEnd > DateTime.Now;
+        /// <summary>
+        /// buff start time
+        /// </summary>
+        public DateTime StartTime { get; }
 
         public BuffData(BuffCollectable config)
         {
-            _config = config;
-            _startTime = DateTime.Now;
-            _buffEnd = _startTime + TimeSpan.FromSeconds(_config.Time);
+            Config = config;
+            StartTime = DateTime.Now;
+            BuffEnd = StartTime + TimeSpan.FromSeconds(Config.Time);
         }
     }
 }

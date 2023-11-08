@@ -3,22 +3,49 @@ using UnityEngine;
 
 namespace MyRI.Mechanics.Controllers.InputControllers
 {
+    
+    /// <summary>
+    /// Controller for input keys fly state and change height
+    /// </summary>
     public class FlyInputController : IInputController
     {
-
-        public event Action UpEvent;
-        public event Action DownEvent;
+        /// <summary>
+        /// event on start up
+        /// </summary>
+        public event Action UpStartEvent;
         
+        /// <summary>
+        /// event on start down
+        /// </summary>
+        public event Action DownStartEvent;
+
+        /// <summary>
+        /// event on stop height change
+        /// </summary>
+        public event Action StopEvent;
+
+        private KeyCode _currentKey;
+
         public void CheckInput()
         {
-            if (Input.GetKeyDown(KeyCode.W))
+            var wDown = Input.GetKeyDown(KeyCode.W);
+            if (wDown && _currentKey != KeyCode.W)
             {
-                UpEvent?.Invoke();
+                UpStartEvent?.Invoke();
+                _currentKey = KeyCode.W;
             }
-            
-            if (Input.GetKeyDown(KeyCode.S))
+
+            var sDown = Input.GetKeyDown(KeyCode.S);
+            if (sDown && _currentKey != KeyCode.S)
             {
-                DownEvent?.Invoke();
+                DownStartEvent?.Invoke();
+                _currentKey = KeyCode.S;
+            }
+
+            if (!wDown && !sDown && _currentKey != KeyCode.None)
+            {
+                StopEvent?.Invoke();
+                _currentKey = KeyCode.None;
             }
         }
     }

@@ -5,10 +5,14 @@ using MyRI.Components.Character;
 using UnityEngine;
 using UnityEngine.Serialization;
 using CharacterController=MyRI.Mechanics.Controllers.Character.CharacterController;
-using Random = System.Random;
+using Random=System.Random;
 
 namespace MyRI
 {
+    
+    /// <summary>
+    /// spawner for map and character on game start and move
+    /// </summary>
     public class MapSpawner : MonoBehaviour
     {
         [FormerlySerializedAs("DefaultPoint")]
@@ -35,7 +39,6 @@ namespace MyRI
         [SerializeField]
         private SceneStarter _starter;
 
-        private readonly List<UnityEngine.Tilemaps.Tilemap> _levels = new();
         private CharacterController _characterController;
         private UnityEngine.Tilemaps.Tilemap _current;
 
@@ -48,7 +51,7 @@ namespace MyRI
 
         public SceneStarter Starter => _starter;
 
-        public List<UnityEngine.Tilemaps.Tilemap> Levels => _levels;
+        public List<UnityEngine.Tilemaps.Tilemap> Levels { get; } = new();
 
         private void OnEnable()
         {
@@ -62,7 +65,7 @@ namespace MyRI
 
         private void OnDisable()
         {
-            foreach (var tilemap in _levels)
+            foreach (var tilemap in Levels)
             {
                 Destroy(tilemap.gameObject);
             }
@@ -70,7 +73,7 @@ namespace MyRI
             if (_player != null)
                 Destroy(_player.gameObject);
 
-            _levels.Clear();
+            Levels.Clear();
             _orientation = 1;
             _currentMap = int.MaxValue;
             _current = null;
@@ -88,7 +91,7 @@ namespace MyRI
         private void UpdateMaps()
         {
             SpawnMap();
-            if (_levels.Count == 1)
+            if (Levels.Count == 1)
             {
                 _currentMap = 0;
                 SpawnPlayer();
@@ -99,9 +102,9 @@ namespace MyRI
 
         private void SpawnPlayer()
         {
-            var tilemap = _levels.Last().gameObject.GetComponent<Tilemap>();
+            var tilemap = Levels.Last().gameObject.GetComponent<Tilemap>();
             var go = Instantiate(ResourcesManager.Instance.Player, tilemap.PlayerSpawnPoint.position,
-                Quaternion.identity);
+            Quaternion.identity);
             _tracker.player = go.transform;
             _player = go.GetComponent<CharacterViewComponent>();
             _characterController = new CharacterController(_player, ResourcesManager.Instance.PlayerConfig);
@@ -113,7 +116,8 @@ namespace MyRI
         {
             var next = _random.NextDouble();
 
-            var lastMapItem = _levels.Count == 0 ? null : _orientation == 1 ? _levels.Last() : _levels.First();
+            var lastMapItem = Levels.Count == 0 ? null :
+                _orientation == 1 ? Levels.Last() : Levels.First();
             var position = lastMapItem == null ? Vector2.zero : (Vector2) lastMapItem.gameObject.transform.position;
             foreach (var map in _maps)
             {
@@ -130,19 +134,19 @@ namespace MyRI
                 var go = Instantiate(map.Map, currentPosition, Quaternion.identity, _defaultPoint);
                 var tile = go.GetComponent<UnityEngine.Tilemaps.Tilemap>();
                 if (_orientation == 1)
-                    _levels.Add(tile);
+                    Levels.Add(tile);
                 else
                 {
-                    _levels.Insert(0, tile);
+                    Levels.Insert(0, tile);
                 }
                 MapSpawned?.Invoke(tile);
-                
+
                 break;
             }
 
-            for (int i = 0; i < _levels.Count; i++)
+            for (var i = 0; i < Levels.Count; i++)
             {
-                var tilemap = _levels[i];
+                var tilemap = Levels[i];
                 var level = tilemap.GetComponent<Tilemap>();
                 level.index = i;
                 level.spawner = this;
@@ -155,7 +159,7 @@ namespace MyRI
         {
             _current = tile.tile;
             _currentMap = tile.index;
-            if (_orientation == 1 && _levels.Count - _currentMap <= 2 || _orientation == -1 && _currentMap <= 1)
+            if (_orientation == 1 && Levels.Count - _currentMap <= 2 || _orientation == -1 && _currentMap <= 1)
             {
                 SpawnMap();
             }

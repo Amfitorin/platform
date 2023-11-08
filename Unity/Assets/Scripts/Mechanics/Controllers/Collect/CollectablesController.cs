@@ -6,14 +6,41 @@ using MyRI.Mechanics.Effects;
 
 namespace MyRI.Mechanics.Controllers.Collect
 {
+    
+    /// <summary>
+    /// Controller for collectables elements 
+    /// </summary>
     public class CollectablesController : ICollectablesController, IBuffNotify
     {
-        private readonly MapSpawner _mapSpawner;
-        public event Action CarPartGained;
+        
+        /// <summary>
+        /// event invoked when character collect buff item
+        /// </summary>
         public event Action<BuffData> BuffGained;
+        
+        /// <summary>
+        ///  event invoked when character collect car part item
+        /// </summary>
+        public event Action CarPartGained;
+        
+        /// <summary>
+        /// map spawner need for controll spawn new map levels
+        /// </summary>
+        private readonly MapSpawner _mapSpawner;
 
+        /// <summary>
+        /// collectable points on map subscribed to collect event
+        /// </summary>
         private readonly List<CollectablePoint> _points = new();
+        
+        /// <summary>
+        /// all collected car parts
+        /// </summary>
         public Dictionary<CarPartCollectable, int> CarParts { get; } = new();
+        
+        /// <summary>
+        /// current collected and not expired buffs
+        /// </summary>
         public List<BuffData> GainedBuffs { get; } = new();
 
         public CollectablesController(MapSpawner mapSpawner)
@@ -22,35 +49,16 @@ namespace MyRI.Mechanics.Controllers.Collect
             _mapSpawner.MapSpawned += OnMapSpawned;
             TrackMaps();
         }
-        private void TrackMaps()
-        {
 
-            foreach (var tilemap in _mapSpawner.Levels)
-            {
-                OnMapSpawned(tilemap);
-            }
-        }
-        private void OnMapSpawned(UnityEngine.Tilemaps.Tilemap tile)
+        public void Dispose()
         {
-            var points = tile.gameObject.GetComponentsInChildren(typeof(CollectablePoint)).Where(x => x != null).Select(x => (CollectablePoint) x).ToArray();
-            foreach (var point in points)
+            _mapSpawner.MapSpawned -= OnMapSpawned;
+            foreach (var point in _points)
             {
-                point.CollectableTaken += OnCollectableTaken;
-                _points.Add(point);
+                point.CollectableTaken -= OnCollectableTaken;
             }
-        }
-
-        private void OnCollectableTaken(CollectablePoint point)
-        {
-            switch (point.Config)
-            {
-                case CarPartCollectable carPart:
-                    ApplyCarPart(carPart);
-                    break;
-                case BuffCollectable buff:
-                    ApplyBuff(buff);
-                    break;
-            }
+            _points.Clear();
+            CarParts.Clear();
         }
 
         private void ApplyBuff(BuffCollectable buff)
@@ -80,15 +88,34 @@ namespace MyRI.Mechanics.Controllers.Collect
             SceneStarter.Instance.HUD.Collectables.ShowCarPart(carPart.PartType, count);
         }
 
-        public void Dispose()
+        private void OnCollectableTaken(CollectablePoint point)
         {
-            _mapSpawner.MapSpawned -= OnMapSpawned;
-            foreach (var point in _points)
+            switch (point.Config)
             {
-                point.CollectableTaken -= OnCollectableTaken;
+                case CarPartCollectable carPart:
+                    ApplyCarPart(carPart);
+                    break;
+                case BuffCollectable buff:
+                    ApplyBuff(buff);
+                    break;
             }
-            _points.Clear();
-            CarParts.Clear();
+        }
+        private void OnMapSpawned(UnityEngine.Tilemaps.Tilemap tile)
+        {
+            var points = tile.gameObject.GetComponentsInChildren(typeof(CollectablePoint)).Where(x => x != null).Select(x => (CollectablePoint) x).ToArray();
+            foreach (var point in points)
+            {
+                point.CollectableTaken += OnCollectableTaken;
+                _points.Add(point);
+            }
+        }
+        private void TrackMaps()
+        {
+
+            foreach (var tilemap in _mapSpawner.Levels)
+            {
+                OnMapSpawned(tilemap);
+            }
         }
     }
 }

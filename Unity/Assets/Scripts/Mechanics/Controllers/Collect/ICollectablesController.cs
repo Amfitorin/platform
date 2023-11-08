@@ -1,14 +1,16 @@
 using System;
-using System.Collections.Generic;
-using MyRI.Configs.Collectables;
-using MyRI.Mechanics.Effects;
 
 namespace MyRI.Mechanics.Controllers.Collect
 {
-    public interface ICollectablesController: IDisposable
+    
+    /// <summary>
+    /// collectables controller 
+    /// </summary>
+    public interface ICollectablesController : IDisposable
     {
-        Dictionary<CarPartCollectable, int> CarParts { get; }
-        List<BuffData> GainedBuffs { get; }
+        /// <summary>
+        /// event invoked when character collect car part
+        /// </summary>
         event Action CarPartGained;
     }
 }

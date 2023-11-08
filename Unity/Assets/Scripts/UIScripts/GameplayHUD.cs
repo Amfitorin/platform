@@ -1,11 +1,13 @@
-﻿using System;
-using MyRI.Components;
+﻿using MyRI.Components;
 using MyRI.Components.Collectables;
 using UnityEngine;
 using UnityEngine.Serialization;
 
 namespace MyRI.UIScripts
 {
+    /// <summary>
+    /// main gameplay hud
+    /// </summary>
     public class GameplayHUD : BaseWindow
     {
         [SerializeField]
@@ -34,10 +36,10 @@ namespace MyRI.UIScripts
         [FormerlySerializedAs("Enemy")]
         [SerializeField]
         private ProgressBar _enemy;
-        
+
         [SerializeField]
         private GameObject _baseMove;
-        
+
         [SerializeField]
         private GameObject _flyMove;
 
@@ -46,7 +48,7 @@ namespace MyRI.UIScripts
 
         [SerializeField]
         private ButtonController _flyUp;
-        
+
         [SerializeField]
         private ButtonController _flyDown;
 
@@ -57,7 +59,7 @@ namespace MyRI.UIScripts
         public ButtonController JumpButton => _jumpButton;
 
         public ButtonController FlyUp => _flyUp;
-        
+
         public ButtonController FlyDown => _flyDown;
 
         public GameObject BaseMove => _baseMove;

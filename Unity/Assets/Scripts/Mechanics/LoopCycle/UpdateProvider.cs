@@ -5,8 +5,21 @@ using UniRx;
 
 namespace MyRI.Mechanics.LoopCycle
 {
+    /// <summary>
+    /// provider for update cycle
+    /// </summary>
     public class UpdateProvider : IUpdateProvider
     {
+        /// <summary>
+        /// update loop token
+        /// </summary>
+        private readonly IDisposable _token;
+        
+        /// <summary>
+        /// registered update listeners
+        /// </summary>
+        private readonly List<IUpdateListener> _updateListeners = new();
+        
         public UpdateProvider()
         {
             _token = Observable.EveryUpdate().Subscribe(_ =>
@@ -19,8 +32,6 @@ namespace MyRI.Mechanics.LoopCycle
                 }
             });
         }
-        private List<IUpdateListener> _updateListeners = new();
-        private readonly IDisposable _token;
 
         public void RegisterUpdateListener(IUpdateListener obj)
         {

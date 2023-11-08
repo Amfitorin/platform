@@ -6,32 +6,44 @@ using UnityEngine.Serialization;
 
 namespace MyRI
 {
+    
+    /// <summary>
+    /// component for enemy boss
+    /// </summary>
     public class PlayerAtacker : MonoBehaviour
     {
         [FormerlySerializedAs("Health")]
         [SerializeField]
         private float _health;
+
         [FormerlySerializedAs("MaxAttackCooldown")]
         [SerializeField]
         private float _maxAttackCooldown;
+
         [FormerlySerializedAs("MinAttackCooldown")]
         [SerializeField]
         private float _minAttackCooldown;
+
         [FormerlySerializedAs("cooldownChange")]
         [SerializeField]
         private float _cooldownChange = 0.3f;
+
         [FormerlySerializedAs("bulletSpeed")]
         [SerializeField]
         private float _bulletSpeed;
+
         [FormerlySerializedAs("Damage")]
         [SerializeField]
         private float _damage;
+
         [FormerlySerializedAs("precast")]
         [SerializeField]
         private float _precast = 3f;
+
         [FormerlySerializedAs("animator")]
         [SerializeField]
         private Animator _animator;
+
         [FormerlySerializedAs("progr")]
         [SerializeField]
         private ProgressBar _progress;

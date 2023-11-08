@@ -5,10 +5,11 @@ using UnityEngine;
 
 namespace MyRI
 {
+    /// <summary>
+    /// spawn point for collectables elements. Spawn element with spawn weight and send collect event
+    /// </summary>
     public class CollectablePoint : MonoBehaviour
     {
-        public event Action<CollectablePoint> CollectableTaken;
-
         [Range(0f, 1f)]
         [SerializeField]
         private float chance;
@@ -32,6 +33,16 @@ namespace MyRI
             Renderer.enabled = false;
             RollItem();
         }
+
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (Config == null)
+                return;
+
+            CollectableTaken?.Invoke(this);
+            gameObject.SetActive(false);
+        }
+        public event Action<CollectablePoint> CollectableTaken;
 
         private void RollItem()
         {
@@ -67,15 +78,6 @@ namespace MyRI
             }
 
             Collider.enabled = false;
-        }
-
-        private void OnTriggerEnter2D(Collider2D other)
-        {
-            if (Config == null)
-                return;
-            
-            CollectableTaken?.Invoke(this);
-            gameObject.SetActive(false);
         }
     }
 

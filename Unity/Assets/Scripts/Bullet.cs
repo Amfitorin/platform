@@ -6,6 +6,10 @@ using UnityEngine.Serialization;
 
 namespace MyRI
 {
+    
+    /// <summary>
+    /// Bullet component for character and enemy bullet
+    /// </summary>
     public class Bullet : MonoBehaviour
     {
 

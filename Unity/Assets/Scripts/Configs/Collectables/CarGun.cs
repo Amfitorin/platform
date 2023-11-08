@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace MyRI.Configs.Collectables
 {
-    
+
     [CreateAssetMenu(menuName = "Configs/Collectables/CarGun")]
     public class CarGun : CarPartCollectable
     {
@@ -11,7 +11,7 @@ namespace MyRI.Configs.Collectables
 
         [SerializeField]
         private float _precast;
-        
+
         [SerializeField]
         private float _cooldown;
 

@@ -5,13 +5,9 @@ namespace MyRI
 {
     public class RandomUtils
     {
-        public Random Random;
-        private RandomUtils()
-        {
-            Random = new Random(DateTime.Now.Second);
-        }
 
         private static RandomUtils _instance;
+        public Random Random;
 
         public static RandomUtils Instance
         {
@@ -21,6 +17,11 @@ namespace MyRI
                     _instance = new RandomUtils();
                 return _instance;
             }
+        }
+
+        private RandomUtils()
+        {
+            Random = new Random(DateTime.Now.Second);
         }
     }
 }

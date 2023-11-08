@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Threading.Tasks;
 using DG.Tweening;
 using MyRI.Configs;
-using MyRI.Configs.Collectables;
 using UnityEngine;
 
 namespace MyRI.Components.Character
@@ -34,14 +32,11 @@ namespace MyRI.Components.Character
         [SerializeField]
         private AnimationStates _states;
 
-        private bool _started;
-        private bool _collided;
         private float _currentHealth;
-        private bool _grounded;
         private bool _inCar;
         private MapSpawner _spawner;
 
-        public bool Started => _started;
+        public bool Started { get; private set; }
 
 
         public MapSpawner Spawner
@@ -63,15 +58,15 @@ namespace MyRI.Components.Character
 
         public void UpdateCollides(Vector2 mainDirection)
         {
-            if (!_started)
+            if (!Started)
                 return;
-            _grounded = Math.Abs(_rig2d.velocity.y) < 0.01 &&
-                        Physics2D.Raycast(_groundCheck.position, Vector2.down, _groundRadius, _whatIsGround);
+            Grounded = Math.Abs(_rig2d.velocity.y) < 0.01 &&
+                       Physics2D.Raycast(_groundCheck.position, Vector2.down, _groundRadius, _whatIsGround);
 
             var raycast = Physics2D.Raycast(transform.position, mainDirection, _groundRadius, _whatIsGround);
 
             var distance = raycast.distance;
-            _collided = raycast.transform != null && distance < _groundRadius;
+            Collided = raycast.transform != null && distance < _groundRadius;
         }
         public void ApplyPosition(Vector2 position)
         {
@@ -88,8 +83,10 @@ namespace MyRI.Components.Character
             _animator.SetTrigger(_states.JumpState);
             _rig2d.velocity = new Vector2(_rig2d.velocity.x, 0.1f);
         }
-        public bool Grounded => _grounded;
-        public bool Collided => _collided;
+        public bool Grounded { get; private set; }
+
+        public bool Collided { get; private set; }
+
         public Vector2 Position => transform.position;
         public void ApplyVelocity(float velocity)
         {
@@ -114,7 +111,7 @@ namespace MyRI.Components.Character
         private async Task StartGame(int seconds)
         {
             await Task.Delay(seconds * 1000);
-            _started = true;
+            Started = true;
         }
 
         public void ApplyDamage(float damage)
@@ -137,7 +134,7 @@ namespace MyRI.Components.Character
         private void GameOver()
         {
             Spawner.Starter.OpenPopup(_spawner.Starter.HUD, false);
-            _started = false;
+            Started = false;
             Time.timeScale = 0f;
             Spawner.Starter.OpenPopup(Spawner.Starter.Fail, true);
         }
@@ -145,7 +142,7 @@ namespace MyRI.Components.Character
         public async void Win()
         {
             Spawner.Starter.OpenPopup(_spawner.Starter.HUD, false);
-            _started = false;
+            Started = false;
             await WaitClose();
         }
 

@@ -3,7 +3,7 @@ namespace MyRI.Configs.Collectables
     public enum CarPartType
     {
         Wheel,
-        Engine, 
+        Engine,
         Gun,
         Body
     }

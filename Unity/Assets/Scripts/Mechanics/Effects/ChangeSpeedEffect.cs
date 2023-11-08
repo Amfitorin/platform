@@ -2,6 +2,9 @@ using MyRI.Configs.Collectables;
 
 namespace MyRI.Mechanics.Effects
 {
+    /// <summary>
+    /// Effect modified character speed for SpeedBuff config
+    /// </summary>
     public class ChangeSpeedEffect : CharacterEffect<ISpeedTargetEffect, SpeedBuff>
     {
         public ChangeSpeedEffect(BuffData data)
@@ -12,7 +15,7 @@ namespace MyRI.Mechanics.Effects
         protected override void ApplyEffectInternal()
         {
             var mover = Target.Mover;
-            mover.ApplySpeedModifier( Config.StaticSpeed);
+            mover.ApplySpeedModifier(Config.StaticSpeed);
         }
 
         protected override void RemoveEffectInternal()

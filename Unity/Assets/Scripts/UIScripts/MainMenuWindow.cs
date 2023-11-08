@@ -6,7 +6,7 @@ namespace MyRI.UIScripts
     public class MainMenuWindow : BaseWindow
     {
         public Image
-            MusicButtonBack; // Кнопка вкл и выкл музыки. Если кнопка в состоянии вкл - спрайт из MusicButtonBackActive, если выкл - спрайт из MusicButtonBackInactive
+            MusicButtonBack;// Кнопка вкл и выкл музыки. Если кнопка в состоянии вкл - спрайт из MusicButtonBackActive, если выкл - спрайт из MusicButtonBackInactive
 
         public Sprite MusicButtonBackActive;
         public Sprite MusicButtonBackInactive;
@@ -42,7 +42,8 @@ namespace MyRI.UIScripts
             if (!MusicToggle.isOn)
             {
                 MusicSource.Stop();
-            } else
+            }
+            else
             {
                 MusicSource.Play();
             }
