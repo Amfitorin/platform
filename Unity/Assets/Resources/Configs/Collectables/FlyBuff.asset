@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: FlyBuff
   m_EditorClassIdentifier: 
   _icon: {fileID: 21300000, guid: 8afb57fea8c4eea4a8085e91c810380b, type: 3}
-  _time: 7
+  _time: 10
