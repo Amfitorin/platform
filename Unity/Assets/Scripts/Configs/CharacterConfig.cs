@@ -7,6 +7,9 @@ namespace MyRI.Configs
     {
         [SerializeField]
         private float _maxSpeed = 8f;
+
+        [SerializeField]
+        private float _flyHeightSpeed = 10f;
         
         [SerializeField]
         private float _jumpForce = 700f;
@@ -34,5 +37,7 @@ namespace MyRI.Configs
         public float Health => _health;
 
         public int InverseForce => _inverseForce;
+
+        public float FlyHeightSpeed => _flyHeightSpeed;
     }
 }

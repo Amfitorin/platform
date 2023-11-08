@@ -19,6 +19,7 @@ namespace MyRI.Mechanics.Controllers.Character.States
         private readonly ICharacterController _character;
         private readonly IBuffNotify _buffs;
         private readonly ICollectablesController _collectables;
+        private Vector2 _direction;
 
         public CharacterStateController(ICharacterController character, ICharacterView view, CharacterConfig config, ICollectablesController collectables, IBuffNotify buffs)
         {
@@ -27,9 +28,10 @@ namespace MyRI.Mechanics.Controllers.Character.States
             _collectables = collectables;
             _baseState = new MoveState(character, view, config);
             _carState = new CarState(character);
-            _flyState = new FlyState(view, config, Vector2.right);
+            _flyState = new FlyState(view, config);
             _collectables.CarPartGained += OnCarPartGained;
             _buffs.BuffGained += OnBuffGained;
+            _direction = Vector2.right;
             ApplyState(_baseState);
         }
         private void ApplyState(ICharacterState state)
@@ -37,9 +39,11 @@ namespace MyRI.Mechanics.Controllers.Character.States
             if (state == null)
                 return;
             _prevState = _currentState;
+            var speed = _currentState?.Mover.CurrentSpeed ?? 0f;
             _currentState?.RemoveState();
             _currentState = state;
-            _currentState.ApplyState();
+            _character.SetState(_currentState);
+            _currentState.ApplyState(_direction, speed);
 
         }
         private async void OnBuffGained(BuffData buff)
@@ -54,9 +58,8 @@ namespace MyRI.Mechanics.Controllers.Character.States
         }
         private void OnCarPartGained()
         {
-            
+            // _direction = Vector2.left;
         }
-
 
         public void Dispose()
         {

@@ -73,6 +73,14 @@ namespace MyRI.Components.Character
             var distance = raycast.distance;
             _collided = raycast.transform != null && distance < _groundRadius;
         }
+        public void ApplyPosition(Vector2 position)
+        {
+            transform.position = position;
+        }
+        public void DisableGravity(bool state)
+        {
+            _rig2d.gravityScale = state ? 0f : 1f;
+        }
 
         public void Jump()
         {
@@ -82,6 +90,7 @@ namespace MyRI.Components.Character
         }
         public bool Grounded => _grounded;
         public bool Collided => _collided;
+        public Vector2 Position => transform.position;
         public void ApplyVelocity(float velocity)
         {
             var rbVelocity = new Vector2(velocity, _rig2d.velocity.y);

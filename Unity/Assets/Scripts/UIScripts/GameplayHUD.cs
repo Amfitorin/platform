@@ -1,4 +1,5 @@
 ﻿using System;
+using MyRI.Components;
 using MyRI.Components.Collectables;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -33,39 +34,35 @@ namespace MyRI.UIScripts
         [FormerlySerializedAs("Enemy")]
         [SerializeField]
         private ProgressBar _enemy;
-
+        
         [SerializeField]
         private GameObject _baseMove;
-
+        
         [SerializeField]
         private GameObject _flyMove;
+
+        [SerializeField]
+        private ButtonController _jumpButton;
+
+        [SerializeField]
+        private ButtonController _flyUp;
+        
+        [SerializeField]
+        private ButtonController _flyDown;
 
         public CollectablesComponent Collectables => _collectables;
 
         public ProgressBar PLayer => _pLayer;
 
+        public ButtonController JumpButton => _jumpButton;
+
+        public ButtonController FlyUp => _flyUp;
+        
+        public ButtonController FlyDown => _flyDown;
+
         public GameObject BaseMove => _baseMove;
 
         public GameObject FlyMove => _flyMove;
-
-        public event Action JumpEvent;
-        public event Action UpEvent;
-        public event Action DownEvent;
-
-        public void OnJumpButtonClick()
-        {
-            JumpEvent?.Invoke();
-        }
-
-        public void OnUpButtonClick()
-        {
-            UpEvent?.Invoke();
-        }
-
-        public void OnDownButtonClick()
-        {
-            DownEvent?.Invoke();
-        }
 
         public void OnPauseButtonClick()
         {

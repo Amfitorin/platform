@@ -80,7 +80,7 @@ namespace MyRI
             _totalWeight = 0f;
             if (_enemy != null)
                 _enemy.SetActive(false);
-            _characterController.Destroy();
+            _characterController?.Destroy();
             MapSpawned = null;
         }
         public event Action<UnityEngine.Tilemaps.Tilemap> MapSpawned;

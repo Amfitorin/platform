@@ -29,9 +29,20 @@ namespace MyRI
                 if (_instance == null)
                 {
                     _instance = FindObjectOfType<SceneStarter>();
+                    if (_instance != null)
+                    {
+                        _instance.InitUpdateProvider();
+                    }
                 }
                 return _instance;
             }
+        }
+
+        private void InitUpdateProvider()
+        {
+            if (_updateProvider != null)
+                return;
+            _updateProvider = new UpdateProvider();
         }
 
         public void OpenPopup(BaseWindow window, bool state)
@@ -42,7 +53,7 @@ namespace MyRI
         private void Awake()
         {
             OpenWithWait(MainM, 3f);
-            _updateProvider = new UpdateProvider();
+           InitUpdateProvider();
         }
 
         public void OpenWithWait(BaseWindow window, float time)

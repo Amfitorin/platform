@@ -4,7 +4,7 @@ namespace MyRI.Mechanics.Controllers.Character
 {
     public interface IMover : IDisposable
     {
-        void Update();
+        float CurrentSpeed { get; }
         void ApplySpeedModifier(float maxSpeed);
     }
 }

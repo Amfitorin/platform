@@ -19,7 +19,7 @@ namespace MyRI.Mechanics.LoopCycle
                 }
             });
         }
-        private List<IUpdateListener> _updateListeners;
+        private List<IUpdateListener> _updateListeners = new();
         private readonly IDisposable _token;
 
         public void RegisterUpdateListener(IUpdateListener obj)
@@ -39,6 +39,11 @@ namespace MyRI.Mechanics.LoopCycle
         public void Dispose()
         {
             _token?.Dispose();
+            foreach (var listener in _updateListeners)
+            {
+                RemoveUpdateListener(listener);
+            }
+            _updateListeners.Clear();
         }
     }
 }

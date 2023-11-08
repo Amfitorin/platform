@@ -8,8 +8,8 @@ namespace MyRI.Mechanics.Controllers.Character
     {
 
         private bool _toDblJumped;
-        public DblJumpMover(ICharacterView characterView, CharacterConfig config, Vector2 direction)
-            : base(characterView, config, direction)
+        public DblJumpMover(ICharacterView characterView, CharacterConfig config, Vector2 direction, float speed)
+            : base(characterView, config, direction, speed)
         {
         }
 
@@ -21,11 +21,12 @@ namespace MyRI.Mechanics.Controllers.Character
 
         public override void Jump()
         {
+            if (ToJumped && !_toDblJumped)
+            {
+                CharacterView.DoubleJump();
+                _toDblJumped = true;
+            }
             base.Jump();
-            if (!ToJumped || _toDblJumped)
-                return;
-            CharacterView.DoubleJump();
-            _toDblJumped = true;
         }
     }
 }

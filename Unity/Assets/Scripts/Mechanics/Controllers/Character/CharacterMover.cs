@@ -17,13 +17,14 @@ namespace MyRI.Mechanics.Controllers.Character
         private float _maxSpeedModifier;
         private float _moveSpeed;
 
-        public CharacterMover(ICharacterView characterView, CharacterConfig config, Vector2 direction)
+        public CharacterMover(ICharacterView characterView, CharacterConfig config, Vector2 direction, float speed)
         {
             CharacterView = characterView;
             _config = config;
             _minSpeed = -config.MaxSpeed;
             _maxSpeed = config.MaxSpeed;
             _mainDirection = direction;
+            _moveSpeed = speed;
             SceneStarter.Instance.UpdateProvider.RegisterUpdateListener(this);
         }
 
@@ -43,21 +44,20 @@ namespace MyRI.Mechanics.Controllers.Character
             CharacterView.ApplyVelocity(velocity);
         }
 
+        public float CurrentSpeed => _moveSpeed;
         public void ApplySpeedModifier(float maxSpeed)
         {
             _maxSpeedModifier += maxSpeed;
         }
         public virtual void Dispose()
         {
-            SceneStarter.Instance.UpdateProvider.RemoveUpdateListener(this);
+            var sceneStarter = SceneStarter.Instance;
+            if (sceneStarter == null)
+                return;
+                
+            sceneStarter.UpdateProvider.RemoveUpdateListener(this);
         }
-
-        // private void Flip()
-        // {
-        //     _mainDirection = Vector2.left;
-        //    
-        // }
-
+        
         private float NormalizeSpeed()
         {
             if (CharacterView.Collided)

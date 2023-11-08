@@ -1,3 +1,5 @@
+using UnityEngine;
+
 namespace MyRI.Mechanics.Controllers.Character.States
 {
     public class CarState : ICharacterState
@@ -10,7 +12,7 @@ namespace MyRI.Mechanics.Controllers.Character.States
         }
 
         public IMover Mover { get; }
-        public void ApplyState()
+        public void ApplyState(Vector2 direction, float speed)
         {
 
         }

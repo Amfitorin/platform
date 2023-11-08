@@ -10,8 +10,8 @@ namespace MyRI.Mechanics.Controllers.Character
         protected bool ToJumped;
 
         private readonly JumpInputController _inputController;
-        public JumpMover(ICharacterView characterView, CharacterConfig config, Vector2 direction)
-            : base(characterView, config, direction)
+        public JumpMover(ICharacterView characterView, CharacterConfig config, Vector2 direction, float speed)
+            : base(characterView, config, direction, speed)
         {
             _inputController = new JumpInputController();
             _inputController.JumpEvent += OnJumpEvent;
