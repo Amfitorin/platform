@@ -2,6 +2,7 @@
 using System.Threading.Tasks;
 using DG.Tweening;
 using MyRI.Configs;
+using MyRI.Configs.Collectables;
 using UnityEngine;
 
 namespace MyRI.Components.Character
@@ -67,6 +68,16 @@ namespace MyRI.Components.Character
 
             var distance = raycast.distance;
             Collided = raycast.transform != null && distance < _groundRadius;
+        }
+        
+        /// <inheritdoc />
+        public async void ToCar(CarGun gun)
+        {
+            _animator.SetTrigger(_states.CarState);
+            // Flip();
+            _inCar = true;
+            await StartGame(1);
+            _car.StartAttack(gun);
         }
         public void ApplyPosition(Vector2 position)
         {

@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.Threading.Tasks;
 using MyRI.Components.Character;
 using MyRI.Configs;
@@ -47,7 +48,7 @@ namespace MyRI.Mechanics.Controllers.Character.States
         /// <summary>
         /// Current move direction, when collect car parts move right, after move left
         /// </summary>
-        private readonly Vector2 _direction;
+        private Vector2 _direction;
         
         /// <summary>
         /// fly character state, applyed, when character collect fly buff
@@ -65,7 +66,7 @@ namespace MyRI.Mechanics.Controllers.Character.States
             _buffs = buffs;
             _collectables = collectables;
             _baseState = new MoveState(view, config);
-            _carState = new CarState(character);
+            _carState = new CarState(view, config, collectables);
             _flyState = new FlyState(view, config);
             _collectables.CarPartGained += OnCarPartGained;
             _buffs.BuffGained += OnBuffGained;
@@ -104,7 +105,15 @@ namespace MyRI.Mechanics.Controllers.Character.States
         }
         private void OnCarPartGained()
         {
-            // _direction = Vector2.left;
+            foreach (var partCount in ResourcesManager.Instance.PartCounts)
+            {
+                var valuePair = _collectables.CarParts.FirstOrDefault(x=>x.Key.PartType == partCount.Part);
+                if (valuePair.Key == null || valuePair.Value != partCount.Count )
+                    return;
+            }
+            _direction = Vector2.left;
+            SceneStarter.Instance.MapSpawner.SetOrientation(_direction);
+            ApplyState(_carState);
         }
     }
 }

@@ -19,7 +19,7 @@ namespace MyRI.Mechanics.Controllers.Character.States
         /// Character configuration settings
         /// </summary>
         private readonly CharacterConfig _config;
-        
+
         /// <summary>
         /// character fly direction changed, when player press and hold height button
         /// </summary>

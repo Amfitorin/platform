@@ -164,5 +164,18 @@ namespace MyRI
                 SpawnMap();
             }
         }
+
+        public void SetOrientation(Vector2 direction)
+        {
+            if (direction == Vector2.left)
+            {
+                _orientation = -1;
+            }
+
+            if (direction == Vector2.right)
+            {
+                _orientation = 1;
+            }
+        }
     }
 }

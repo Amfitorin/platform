@@ -32,6 +32,10 @@ namespace MyRI.Mechanics.Controllers.Collect
         /// collectable points on map subscribed to collect event
         /// </summary>
         private readonly List<CollectablePoint> _points = new();
+
+        /// <inheritdoc />
+        public CarGun GunConfig { get; private set; }
+        
         
         /// <summary>
         /// all collected car parts
@@ -74,6 +78,10 @@ namespace MyRI.Mechanics.Controllers.Collect
             {
                 count = 1;
                 CarParts.Add(carPart, count);
+                if (carPart.PartType == CarPartType.Gun)
+                {
+                    GunConfig = carPart as CarGun;
+                }
             }
             else if (count >= carPart.MaxCount)
             {

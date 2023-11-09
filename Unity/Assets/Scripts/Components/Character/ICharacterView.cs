@@ -1,3 +1,4 @@
+using MyRI.Configs.Collectables;
 using UnityEngine;
 
 
@@ -66,5 +67,6 @@ namespace MyRI.Components.Character
         /// Update collides states on move direction
         /// </summary>
         void UpdateCollides(Vector2 mainDirection);
+        void ToCar(CarGun gun);
     }
 }
